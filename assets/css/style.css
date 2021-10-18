@@ -1,0 +1,259 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* now 1.5rem = 15px */
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Hollows';
+  src: url("../fonts/Hollows.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Variable';
+  src: url("../fonts/Sora-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Bold';
+  src: url("../fonts/static/Sora-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-ExtraBold';
+  src: url("../fonts/static/Sora-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-ExtraLight';
+  src: url("../fonts/static/Sora-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Light';
+  src: url("../fonts/static/Sora-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Medium';
+  src: url("../fonts/static/Sora-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Regular';
+  src: url("../fonts/static/Sora-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-SemiBold';
+  src: url("../fonts/static/Sora-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Sora-Thin';
+  src: url("../fonts/static/Sora-Thin.ttf") format("truetype");
+}
+
+:root {
+  --nullColor:     rgb(218, 218, 218);
+  --mainColor:     rgb(230, 120, 17);
+  --secondColor:   rgb(136, 30, 228);
+  --accentColor:   rgb(133, 226, 31);
+  --lightColor:    rgb(73, 29, 136);
+  --darkColor:     rgb(51, 26, 56);
+  --purpleColor:   rgb(136, 30, 228);
+  --gradientColor:  linear-gradient(45deg ,rgba(73, 29, 136,0.5) ,rgba(136, 30, 228,0.5));
+}
+
+html {
+  background-color: var(--nullColor);
+  font-family: 'Sora-ExtraBold';
+}
+
+body {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+
+header {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  padding: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Sora-ExtraBold';
+  color: white;
+  text-transform: uppercase;
+}
+
+main {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 30rem;
+  height: auto;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+main h2 {
+  position: absolute;
+  top: 10rem;
+  left: 1.5rem;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Hollows';
+}
+
+.containerGhost {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.containerGhost img {
+  cursor: pointer;
+  mix-blend-mode: lighten;
+  max-width: 50rem;
+  height: auto;
+}
+
+.menuBonus {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menuBonus .btn {
+  width: 10rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 1rem 0 1rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Sora-ExtraBold';
+  text-transform: uppercase;
+  color: white;
+  background: var(--gradientColor);
+}
+
+.menuBonus .btn .logoBtn {
+  width: 6rem;
+  height: 6rem;
+}
+
+.btn:hover {
+  background-color: var(--mainColor);
+}

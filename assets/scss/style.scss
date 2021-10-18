@@ -1,0 +1,143 @@
+@import "./libs/reset.scss";
+@import "./libs/fonts.scss";
+
+:root{
+    --nullColor:     rgb(218, 218, 218);
+    --mainColor:     rgb(230, 120, 17);
+    --secondColor:   rgb(136, 30, 228);
+    --accentColor:   rgb(133, 226, 31);
+    --lightColor:    rgb(73, 29, 136);
+    --darkColor:     rgb(51, 26, 56);
+    --purpleColor:   rgb(136, 30, 228);
+    --gradientColor:  linear-gradient(45deg ,rgba(73, 29, 136,0.5) ,rgba(136, 30, 228,0.5));
+}
+// var(--white-color);
+
+@mixin flex--center { 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+// @include  flex--center;
+
+html{
+    background-color: var(--nullColor) ; 
+    font-family: 'Sora-ExtraBold';
+}
+
+body{
+    @include  flex--center;
+    
+    width: 100vw;
+    height: 100%;
+}
+
+header{
+    @include  flex--center;
+    width: 100%;
+    
+    background-color: rgba(0,0,0,0.2);
+
+    h1{ 
+        padding: 2rem;
+    
+        text-align: center;
+        font-size: 3rem;
+        font-family: 'Sora-ExtraBold';
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+
+main{
+    @include  flex--center;
+    flex-direction: column;
+    justify-content:space-between;
+
+    min-width: 30rem;
+    height: auto;
+
+    // background-image: linear-gradient(0deg ,#5500A9 ,#92139E);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/bg.jpg");
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+   
+    h2{
+        position:absolute;
+        top: 10rem;
+        left: 1.5rem;
+        
+        color: white;
+        font-size: 3rem;
+        font-family: 'Hollows';
+    }
+}
+
+
+.containerGhost{
+    @include  flex--center;
+    
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    img{
+        cursor: pointer;
+        mix-blend-mode: lighten;
+        max-width:  50rem;
+        height: auto;
+    }
+}
+
+
+
+.menuBonus{
+    width: 100%;
+    aspect-ratio: 1;
+
+    @include  flex--center;
+    justify-content: space-around;
+    align-content: stretch;
+    flex-wrap: wrap;
+    
+
+    // background-color: rgba(0,0,0,0.1);
+    
+    .btn{
+
+        width:  10rem;
+        aspect-ratio: 1;
+
+        cursor: pointer;
+        margin: 1rem;
+        padding: 1rem 0 1rem 0;
+        // border: 1px solid var(--darkColor);
+        border-radius: 0.5rem;
+        border: none;
+        text-align:center;
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: 'Sora-ExtraBold';
+        text-transform: uppercase;
+        color: white;
+        
+        background: var(--gradientColor);
+        
+        .logoBtn{
+            
+            width:  6rem;
+            height: 6rem;
+            
+            // margin-right: 1rem;
+        }
+    }
+}
+
+.btn:hover {
+    background-color:  var(--mainColor); 
+}
