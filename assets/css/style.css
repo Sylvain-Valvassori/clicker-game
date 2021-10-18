@@ -114,23 +114,15 @@ td, th {
 
 /*============== base html ===================*/
 html {
+  height: 100%;
+  width: 100vw;
   background-color: var(--nullColor);
   font-family: var(--mainFont);
 }
 
 body {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100%;
   width: 100vw;
-  height: 100vh;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
   background-position: center center;
@@ -139,45 +131,13 @@ body {
 }
 
 /*============== main content ===================*/
-main {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-width: 30rem;
-  height: 100%;
-  position: relative;
-}
-
-main header {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+header {
   width: 100%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-main header h1 {
+header h1 {
   padding: 2rem;
   text-align: center;
   font-size: 3rem;
@@ -186,13 +146,18 @@ main header h1 {
   text-transform: uppercase;
 }
 
+main {
+  margin: 0 auto;
+  min-width: 30rem;
+  max-height: 100vh;
+  text-align: center;
+}
+
 main h2 {
-  position: absolute;
-  top: 10rem;
-  left: 2rem;
-  color: white;
-  font-size: 4rem;
+  color: var(--whiteColor);
+  font-size: 5rem;
   font-family: var(--secondFont);
+  margin: 4rem 0 3rem 0;
 }
 
 /*============== Ghost ===================*/
@@ -204,10 +169,12 @@ main h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 40rem;
   aspect-ratio: 1;
   overflow: hidden;
 }
@@ -216,7 +183,7 @@ main h2 {
   cursor: pointer;
   mix-blend-mode: lighten;
   max-width: 50rem;
-  height: auto;
+  aspect-ratio: 1;
 }
 
 /*============== Bonus buttons ===================*/
@@ -231,6 +198,8 @@ main h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -282,6 +251,8 @@ main h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -296,16 +267,18 @@ main h2 {
 
 /*============== Responsive  Média querry  ===================*/
 @media (min-width: 768px) {
-  main header h1 {
+  header h1 {
     font-size: 5rem;
   }
   main h2 {
-    top: 14rem;
     font-size: 6rem;
+  }
+  .containerGhost {
+    max-width: 75%;
   }
   .containerGhost img {
     max-width: 70rem;
-    height: auto;
+    aspect-ratio: 1;
   }
   .menuBonus {
     max-width: 100%;
@@ -315,7 +288,66 @@ main h2 {
     aspect-ratio: 1;
   }
   .menuBonus .btn .logoBtn {
-    width: 8rem;
+    width: 6rem;
+    aspect-ratio: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 4rem;
+  }
+  main {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main h2 {
+    width: 15rem;
+    margin: 4rem 0 0 3rem;
+    font-size: 6rem;
+  }
+  .containerGhost {
+    cursor: pointer;
+    mix-blend-mode: lighten;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  .containerGhost img {
+    max-width: 70rem;
+    aspect-ratio: 1;
+  }
+  .menuBonus {
+    max-width: 100%;
+    margin: 0 2rem 0 0;
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menuBonus p {
+    left: 3rem;
+  }
+  .menuBonus .btn {
+    width: 10rem;
+    aspect-ratio: 1;
+  }
+  .menuBonus .btn .logoBtn {
+    width: 6rem;
     aspect-ratio: 1;
   }
 }
