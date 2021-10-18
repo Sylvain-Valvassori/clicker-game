@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -96,7 +97,9 @@ td, th {
   src: url("../fonts/static/Sora-Thin.ttf") format("truetype");
 }
 
+/*============== variables setup ===================*/
 :root {
+  --whiteColor:    rgb(255, 255, 255);
   --nullColor:     rgb(218, 218, 218);
   --mainColor:     rgb(230, 120, 17);
   --secondColor:   rgb(136, 30, 228);
@@ -104,12 +107,15 @@ td, th {
   --lightColor:    rgb(73, 29, 136);
   --darkColor:     rgb(51, 26, 56);
   --purpleColor:   rgb(136, 30, 228);
-  --gradientColor:  linear-gradient(45deg ,rgba(73, 29, 136,0.5) ,rgba(136, 30, 228,0.5));
+  --gradientColor: linear-gradient(45deg ,rgba(73, 29, 136,0.5) ,rgba(136, 30, 228,0.5));
+  --mainFont: 'Sora-ExtraBold';
+  --secondFont: 'Hollows';
 }
 
+/*============== base html ===================*/
 html {
   background-color: var(--nullColor);
-  font-family: 'Sora-ExtraBold';
+  font-family: var(--mainFont);
 }
 
 body {
@@ -125,8 +131,14 @@ body {
           align-items: center;
   width: 100vw;
   height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+/*============== main content ===================*/
 main {
   margin: 0 auto;
   display: -webkit-box;
@@ -147,11 +159,6 @@ main {
           justify-content: space-between;
   min-width: 30rem;
   height: 100%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -174,7 +181,7 @@ main header h1 {
   padding: 2rem;
   text-align: center;
   font-size: 3rem;
-  font-family: 'Sora-ExtraBold';
+  font-family: var(--mainFont);
   color: white;
   text-transform: uppercase;
 }
@@ -182,12 +189,13 @@ main header h1 {
 main h2 {
   position: absolute;
   top: 10rem;
-  left: 1.5rem;
+  left: 2rem;
   color: white;
   font-size: 4rem;
-  font-family: 'Hollows';
+  font-family: var(--secondFont);
 }
 
+/*============== Ghost ===================*/
 .containerGhost {
   margin: 0 auto;
   display: -webkit-box;
@@ -211,9 +219,11 @@ main h2 {
   height: auto;
 }
 
+/*============== Bonus buttons ===================*/
 .menuBonus {
-  width: 80%;
-  aspect-ratio: 1;
+  position: relative;
+  max-width: 80%;
+  height: auto;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,9 +238,23 @@ main h2 {
       justify-content: space-around;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.menuBonus p {
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
+  color: var(--whiteColor);
+  font-family: var(--mainFont);
+  font-size: 3rem;
 }
 
 .menuBonus .btn {
@@ -244,17 +268,54 @@ main h2 {
   text-align: center;
   text-decoration: none;
   font-size: 2rem;
-  font-family: 'Sora-ExtraBold';
+  font-family: var(--mainFont);
   text-transform: uppercase;
-  color: white;
+  color: var(--whiteColor);
   background: var(--gradientColor);
 }
 
 .menuBonus .btn .logoBtn {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
   width: 6rem;
-  height: 6rem;
+  aspect-ratio: 1;
 }
 
 .btn:hover {
   background-color: var(--mainColor);
+}
+
+/*============== Responsive  Média querry  ===================*/
+@media (min-width: 768px) {
+  main header h1 {
+    font-size: 5rem;
+  }
+  main h2 {
+    top: 14rem;
+    font-size: 6rem;
+  }
+  .containerGhost img {
+    max-width: 70rem;
+    height: auto;
+  }
+  .menuBonus {
+    max-width: 100%;
+  }
+  .menuBonus .btn {
+    width: 15rem;
+    aspect-ratio: 1;
+  }
+  .menuBonus .btn .logoBtn {
+    width: 8rem;
+    aspect-ratio: 1;
+  }
 }
