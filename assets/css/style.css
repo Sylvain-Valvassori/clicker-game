@@ -230,6 +230,7 @@ main h2 {
       align-content: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .menuBonus .btn {
