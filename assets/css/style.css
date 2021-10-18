@@ -124,31 +124,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: 100%;
-}
-
-header {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-  padding: 2rem;
-  text-align: center;
-  font-size: 3rem;
-  font-family: 'Sora-ExtraBold';
-  color: white;
-  text-transform: uppercase;
+  height: 100vh;
 }
 
 main {
@@ -170,7 +146,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 30rem;
-  height: auto;
+  height: 100%;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
   background-position: center center;
@@ -179,12 +155,36 @@ main {
   position: relative;
 }
 
+main header {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main header h1 {
+  padding: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Sora-ExtraBold';
+  color: white;
+  text-transform: uppercase;
+}
+
 main h2 {
   position: absolute;
   top: 10rem;
   left: 1.5rem;
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Hollows';
 }
 
