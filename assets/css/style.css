@@ -147,7 +147,7 @@ header h1 {
 main {
   margin: 0 auto;
   min-width: 30rem;
-  height: auto;
+  max-height: 100%;
   text-align: center;
 }
 
@@ -275,6 +275,16 @@ main h2 span {
 }
 
 /*============== Responsive  Média querry  ===================*/
+@media (min-width: 650px) {
+  .menuBonus {
+    margin-top: 10rem;
+  }
+  .menuBonus .btn {
+    width: 10rem;
+    aspect-ratio: 1;
+  }
+}
+
 @media (min-width: 768px) {
   header h1 {
     font-size: 5rem;
@@ -291,9 +301,10 @@ main h2 span {
   }
   .menuBonus {
     max-width: 100%;
+    margin-top: 8rem;
   }
   .menuBonus .btn {
-    width: 15rem;
+    width: 12rem;
     aspect-ratio: 1;
   }
   .menuBonus .btn .logoBtn {
