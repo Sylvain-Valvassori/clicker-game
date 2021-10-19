@@ -107,22 +107,20 @@ td, th {
   --lightColor:    rgb(73, 29, 136);
   --darkColor:     rgb(51, 26, 56);
   --purpleColor:   rgb(136, 30, 228);
-  --gradientColor: linear-gradient(45deg ,rgba(73, 29, 136,0.5) ,rgba(136, 30, 228,0.5));
+  --gradientColor: linear-gradient(45deg ,rgba(73, 29, 136,0.5),rgba(136, 30, 228,0.5));
   --mainFont: 'Sora-ExtraBold';
   --secondFont: 'Hollows';
 }
 
 /*============== base html ===================*/
 html {
-  height: 100%;
-  width: 100vw;
   background-color: var(--nullColor);
   font-family: var(--mainFont);
 }
 
 body {
-  height: 100%;
-  width: 100vw;
+  width: 100%;
+  height: 100vh;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
   background-position: center center;
@@ -149,7 +147,7 @@ header h1 {
 main {
   margin: 0 auto;
   min-width: 30rem;
-  max-height: 100vh;
+  height: auto;
   text-align: center;
 }
 
@@ -158,6 +156,10 @@ main h2 {
   font-size: 5rem;
   font-family: var(--secondFont);
   margin: 4rem 0 3rem 0;
+}
+
+main h2 span {
+  font-size: 3rem;
 }
 
 /*============== Ghost ===================*/
@@ -174,7 +176,7 @@ main h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40rem;
+  width: 30rem;
   aspect-ratio: 1;
   overflow: hidden;
 }
