@@ -110,7 +110,13 @@ main{
         aspect-ratio: 1;
     }
 }
+/*============== Events  Ghost ===================*/
 
+
+.containerGhost img:active{
+    max-width:  45rem;
+    aspect-ratio: 1;
+}
 
 /*============== Bonus buttons ===================*/
 
@@ -172,6 +178,9 @@ main{
         }
     }
 }
+
+
+/*============== Events  Bonus buttons ===================*/
 
 .btn:hover {
     background-color:  var(--mainColor); 

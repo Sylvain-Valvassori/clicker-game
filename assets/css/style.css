@@ -188,6 +188,12 @@ main h2 span {
   aspect-ratio: 1;
 }
 
+/*============== Events  Ghost ===================*/
+.containerGhost img:active {
+  max-width: 45rem;
+  aspect-ratio: 1;
+}
+
 /*============== Bonus buttons ===================*/
 .menuBonus {
   position: relative;
@@ -263,6 +269,7 @@ main h2 span {
   aspect-ratio: 1;
 }
 
+/*============== Events  Bonus buttons ===================*/
 .btn:hover {
   background-color: var(--mainColor);
 }
