@@ -12,3 +12,18 @@ document.getElementById('ghost').addEventListener('click', () => {
     (score < palier4.price) ? btn4.setAttribute("disabled", true) : btn4.removeAttribute("disabled");
     (score < palier5.price) ? btn5.setAttribute("disabled", true) : btn5.removeAttribute("disabled");
 })
+
+
+
+let mySong = document.getElementById("spookySong");
+let icon   = document.getElementById("icon");
+
+icon.onclick = () => { 
+    if (mySong.paused){
+        mySong.play();
+        icon.src= './assets/images/pause.png';
+    }else{
+        mySong.pause();
+        icon.src= './assets/images/play.png';
+    }
+}
