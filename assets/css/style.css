@@ -220,7 +220,7 @@ main h2 span {
           align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
 }
