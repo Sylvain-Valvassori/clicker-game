@@ -127,17 +127,7 @@ body {
 }
 
 /*============== main content ===================*/
-header {
-  width: 100%;
-  height: auto;
-  padding: 0 1rem 0 2rem;
-  text-align: center;
-}
-
-header .containerLogo {
-  width: 100%;
-  height: 35rem;
-  overflow: hidden;
+.containerLogo {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,10 +140,14 @@ header .containerLogo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  padding: 0 1rem 0 2rem;
 }
 
-header .containerLogo img {
-  width: 60rem;
+.containerLogo img {
+  width: 40rem;
   height: auto;
 }
 
@@ -167,12 +161,11 @@ main h2 {
   color: var(--whiteColor);
   font-size: 5rem;
   font-family: var(--secondFont);
-  margin: 0 auto;
   padding: 4rem 0 3rem 0;
 }
 
 main h2 span {
-  font-size: 3rem;
+  font-size: 6rem;
 }
 
 /*============== Ghost ===================*/
@@ -189,7 +182,7 @@ main h2 span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30rem;
+  min-width: 30rem;
   aspect-ratio: 1;
   overflow: hidden;
 }
@@ -197,7 +190,7 @@ main h2 span {
 .containerGhost img {
   cursor: pointer;
   mix-blend-mode: lighten;
-  max-width: 50rem;
+  max-width: 70rem;
   aspect-ratio: 1;
 }
 
@@ -267,12 +260,22 @@ main h2 span {
 }
 
 /*============== Responsive  Média querry  ===================*/
+/*============== Version tablet  ===================*/
 @media (min-width: 768px) {
+  .containerLogo {
+    width: 100%;
+    height: 20rem;
+    padding: 0 1rem 0 2rem;
+  }
+  .containerLogo img {
+    width: 40rem;
+    height: auto;
+  }
   .containerGhost {
     max-width: 75rem;
   }
   .containerGhost img {
-    max-width: 70rem;
+    max-width: 100rem;
     aspect-ratio: 1;
   }
   .menuBonus {
@@ -280,32 +283,59 @@ main h2 span {
   }
 }
 
+/*============== Version Desktop  ===================*/
 @media (min-width: 1024px) {
+  header {
+    width: 100%;
+    padding: 0 1rem 0 2rem;
+    text-align: center;
+  }
+  header .containerLogo {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+  }
+  header .containerLogo img {
+    width: 60rem;
+    height: auto;
+  }
   main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   main h2 {
-    position: relative;
-    top: -26rem;
-    margin: 4rem;
     font-size: 6rem;
+    width: 40rem;
   }
   .containerGhost {
     cursor: pointer;
     mix-blend-mode: lighten;
     width: 70rem;
     aspect-ratio: 1;
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
   .containerGhost img {
-    width: 70rem;
+    max-width: 500rem;
     aspect-ratio: 1;
   }
   .menuBonus {
