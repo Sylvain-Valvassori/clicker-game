@@ -128,7 +128,7 @@ body {
 
 /*============== main content ===================*/
 .btnAudio {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: 2rem;
   width: 3rem;
